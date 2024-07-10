@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: blueviolet;
+            height:250px;
+            width:250px;
+        }
+        .child{
+            background-color: rgb(223, 9, 187);
+            height:100px;
+            width:100px;
+        }
+        .parent:hover .child{
+            animation-name: example;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes example{
+            0%{
+              transform:translateY(0%);
+            }
+            40%{
+                transform:translateY(100%);
+            }
+            70%{
+                transform:translateX(100%) translateY(100%);
+            }
+            100%{
+                transform:translateX(100%);
+            }
+
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+   
+</body>
+</html>
